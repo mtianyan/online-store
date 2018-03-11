@@ -12,7 +12,7 @@
                                 <tbody>
                                     <tr>
                                       <td width="28%" align="right" bgcolor="#FFFFFF">姓名： </td>
-                                      <td width="72%" align="left" bgcolor="#FFFFFF"><input name="email" type="text" placeholder="" size="25" class="inputBg" v-model="userInfo.name"></td>
+                                      <td width="72%" align="left" bgcolor="#FFFFFF"><input name="username" type="text" placeholder="" size="25" class="inputBg" v-model="userInfo.username"></td>
                                     </tr>
                                     <tr>
                                         <td width="28%" align="right" bgcolor="#FFFFFF">出生日期： </td>
@@ -62,6 +62,7 @@ import {getUserDetail, updateUserInfo} from '../../api/api'
         data () {
             return {
                 userInfo: {
+                    username: '',
                     birthday: '',
                     sex: '',
                     email: '',
