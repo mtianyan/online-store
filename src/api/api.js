@@ -74,13 +74,13 @@ export const updateUserInfo = params => { return axios.patch(`${local_host}/user
 
 
 //获取订单
-export const getOrders = () => { return axios.get(`${host}/orders/`) }
+export const getOrders = () => { return axios.get(`${local_host}/orders/`) }
 //删除订单
-export const delOrder = orderId => { return axios.delete(`${host}/orders/`+orderId+'/') }
+export const delOrder = orderId => { return axios.delete(`${local_host}/orders/`+orderId+'/') }
 //添加订单
-export const createOrder = params => {return axios.post(`${host}/orders/`, params)}
+export const createOrder = params => {return axios.post(`${local_host}/orders/`, params)}
 //获取订单详情
-export const getOrderDetail = orderId => {return axios.get(`${host}/orders/`+orderId+'/')}
+export const getOrderDetail = orderId => {return axios.get(`${local_host}/orders/`+orderId+'/')}
 
 
 //获取留言
