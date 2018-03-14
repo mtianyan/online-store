@@ -316,9 +316,9 @@ var router = new Router({
 //进行路由判断
 router.beforeEach((to, from, next) => {
   var nextPath = cookie.getCookie('nextPath')
-  console.log(nextPath)
+  // console.log(nextPath)
   if(nextPath=="pay"){
-    next({
+     next({
       path: '/app/home/member/order',
     });
   }else{
