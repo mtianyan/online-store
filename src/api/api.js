@@ -1,14 +1,12 @@
 import axios from 'axios';
 
-
-let host = 'http://shop.projectsedu.com';
-let local_host = 'http://127.0.0.1:8000'
+let local_host = 'http://115.159.122.64:8000'
 
 //获取商品类别信息
 export const queryCategorygoods = params => { return axios.get(`${local_host}/indexgoods/`) }
 
 //获取首页中的新品
-export const newGoods = params => { return axios.get(`${host}/newgoods/`) }
+// export const newGoods = params => { return axios.get(`${local_host}/newgoods/`) }
 
 //获取轮播图
 export const bannerGoods = params => { return axios.get(`${local_host}/banners/`) }
@@ -25,7 +23,7 @@ export const getCategory = params => {
 
 
 //获取热门搜索关键词
-export const getHotSearch = params => { return axios.get(`${host}/hotsearchs/`) }
+export const getHotSearch = params => { return axios.get(`${local_host}/hotsearchs/`) }
 
 //获取商品列表
 export const getGoods = params => { return axios.get(`${local_host}/goods/`, { params: params }) }
