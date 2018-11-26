@@ -1,10 +1,10 @@
 <template>
   <div class="banner-warp">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="item in banners" :key="item.goods">
-        <router-link :to="'/app/home/productDetail/'+item.goods" target = _blank> <img :src="item.image" alt="" /></router-link>
-      </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
+        <swiper-slide v-for="item in banners" :key="item.goods">
+          <router-link :to="'/app/home/productDetail/'+item.goods" target = _blank> <img :src="item.image" alt="" /></router-link>
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -17,14 +17,9 @@
 
 
 <script>
-  import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import {bannerGoods} from '../../api/api'
 
   export default {
-    components: {
-      swiper,
-      swiperSlide,
-    },
     data() {
 
       return {
@@ -45,7 +40,7 @@
         bannerGoods()
           .then((response)=> {
             console.log(response)
-            //跳转到首页页response.body面
+            // 跳转到首页页response.body面
             this.banners = response.data
           })
           .catch(function (error) {

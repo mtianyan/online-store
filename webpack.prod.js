@@ -57,7 +57,7 @@ module.exports = {
         jquery: 'window.$'
     }, */
     module: {
-        loaders: [
+      rules: [
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',

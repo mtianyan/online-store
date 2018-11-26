@@ -57,7 +57,7 @@ module.exports = {
 		proxy:Proxy
 	},
 	module: {
-		loaders: [
+    rules: [
 			{
 				test: /\.vue$/,
 				loader: 'vue-loader',

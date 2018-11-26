@@ -29,6 +29,11 @@ Vue.prototype.$http = Axios
 //引入需要渲染的视图组件
 import App from './App';
 
+// 全局引入swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper /* { default global options } */)
+
 //创建全局实例
 new Vue({
     el:'#app',
